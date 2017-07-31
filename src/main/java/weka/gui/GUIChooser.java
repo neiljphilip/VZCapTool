@@ -83,12 +83,12 @@ public class GUIChooser {
 
   public static void main(String[] args) {
     List<String> message =
-      Arrays.asList("Waikato Environment for Knowledge Analysis",
+      Arrays.asList("Verizon Capacity Management Tool",
         "Version " + Version.VERSION,
         "(c) " + Copyright.getFromYear() + " - " + Copyright.getToYear(),
-        "The University of Waikato", "Hamilton, New Zealand");
+        "Verizon", "Walnut Creek, CA");
     weka.gui.SplashWindow.splash(
-      ClassLoader.getSystemResource("weka/gui/weka_icon_new.png"), message);
+      ClassLoader.getSystemResource("weka/gui/vz_icon_new.png"), message);
     weka.gui.SplashWindow.invokeMain("weka.gui.GUIChooserApp", args);
     weka.gui.SplashWindow.disposeSplash();
   }
