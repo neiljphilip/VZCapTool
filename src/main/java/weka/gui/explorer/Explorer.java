@@ -198,15 +198,9 @@ public class Explorer extends JPanel {
    */
   public Explorer() {
 
-    String date = (new SimpleDateFormat("EEEE, d MMMM yyyy"))
-      .format(new Date());
-    m_LogPanel.logMessage("Weka Explorer");
-    m_LogPanel.logMessage("(c) " + Copyright.getFromYear() + "-"
-      + Copyright.getToYear() + " " + Copyright.getOwner() + ", "
-      + Copyright.getAddress());
-    m_LogPanel.logMessage("web: " + Copyright.getURL());
-    m_LogPanel.logMessage("Started on " + date);
-    m_LogPanel.statusMessage("Welcome to the Weka Explorer");
+    m_LogPanel.logMessage("VZ Capacity Management Tool");
+    m_LogPanel.logMessage("(c) 2017 - 2017");
+    m_LogPanel.statusMessage("Welcome to the VZ Capacity Management Tool");
 
     // intialize pre-processpanel
     m_PreprocessPanel.setLog(m_LogPanel);
@@ -374,7 +368,7 @@ public class Explorer extends JPanel {
       // m_Memory.setEnabled(false);
 
       m_explorer = new Explorer();
-      final JFrame jf = new JFrame("Weka Explorer");
+      final JFrame jf = new JFrame("VZ Predictive Capacity Analytics");
       jf.getContentPane().setLayout(new BorderLayout());
       jf.getContentPane().add(m_explorer, BorderLayout.CENTER);
       jf.addWindowListener(new WindowAdapter() {
@@ -389,7 +383,7 @@ public class Explorer extends JPanel {
       jf.setVisible(true);
       Image icon = Toolkit.getDefaultToolkit().getImage(
         m_explorer.getClass().getClassLoader()
-          .getResource("weka/gui/weka_icon_new_48.png"));
+          .getResource("weka/gui/MLBrainIcon.png"));
       jf.setIconImage(icon);
 
       if (args.length == 1) {

@@ -85,7 +85,7 @@ public class GUIChooser {
     List<String> message =
       Arrays.asList("Verizon Capacity Management Tool",
         "Version " + Version.VERSION,
-        "(c) " + Copyright.getFromYear() + " - " + Copyright.getToYear(),
+        "(c) " + "2017  - 2017",
         "Verizon", "Walnut Creek, CA");
     weka.gui.SplashWindow.splash(
       ClassLoader.getSystemResource("weka/gui/vz_icon_new.png"), message);

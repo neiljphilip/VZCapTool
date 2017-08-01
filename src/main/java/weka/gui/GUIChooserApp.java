@@ -143,7 +143,7 @@ public class GUIChooserApp extends JFrame {
   protected JButton m_WorkbenchBut = new JButton("Workbench");
 
   /** Click to open the Explorer */
-  protected JButton m_ExplorerBut = new JButton("Explorer");
+  protected JButton m_ExplorerBut = new JButton("Predict");
 
   /** Click to open the Explorer */
   protected JButton m_ExperimenterBut = new JButton("Experimenter");
@@ -160,7 +160,7 @@ public class GUIChooserApp extends JFrame {
   /** The weka image */
   Image m_weka = Toolkit.getDefaultToolkit().getImage(
     GUIChooserApp.class.getClassLoader().getResource(
-      "weka/gui/images/weka_background.gif"));
+      "weka/gui/images/Verizon-logo-brN.png"));
 
   /** filechooser for the TreeVisualizer */
   protected JFileChooser m_FileChooserTreeVisualizer = new JFileChooser(
@@ -207,7 +207,7 @@ public class GUIChooserApp extends JFrame {
    */
   public GUIChooserApp() {
 
-    super("Weka GUI Chooser");
+    super("Verizon Capacity Management Tool");
 
     m_Self = this;
 
@@ -240,7 +240,7 @@ public class GUIChooserApp extends JFrame {
     m_Icon =
       Toolkit.getDefaultToolkit().getImage(
         GUIChooserApp.class.getClassLoader().getResource(
-          "weka/gui/weka_icon_new_48.png"));
+          "weka/gui/MLBrainIcon.png"));
     setIconImage(m_Icon);
     this.getContentPane().setLayout(new BorderLayout());
 
@@ -251,25 +251,26 @@ public class GUIChooserApp extends JFrame {
       .createTitledBorder("Applications"));
     m_PanelApplications.setLayout(new GridLayout(0, 1));
     m_PanelApplications.add(m_ExplorerBut);
-    m_PanelApplications.add(m_ExperimenterBut);
-    m_PanelApplications.add(m_KnowledgeFlowBut);
-    m_PanelApplications.add(m_WorkbenchBut);
-    m_PanelApplications.add(m_SimpleBut);
+    //m_PanelApplications.add(m_ExperimenterBut);
+    //m_PanelApplications.add(m_KnowledgeFlowBut);
+    //m_PanelApplications.add(m_WorkbenchBut);
+    //m_PanelApplications.add(m_SimpleBut);
 
     // Weka image plus copyright info
     JPanel wekaPan = new JPanel();
     wekaPan.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
     wekaPan.setLayout(new BorderLayout());
-    wekaPan.setToolTipText("Weka, a native bird of New Zealand");
+    wekaPan.setToolTipText("A machine learning-based capacity prediction tool.");
     ImageIcon wii = new ImageIcon(m_weka);
     JLabel wekaLab = new JLabel(wii);
     wekaPan.add(wekaLab, BorderLayout.CENTER);
     String infoString =
       "<html>" + "<font size=-2>"
-        + "Waikato Environment for Knowledge Analysis<br>" + "Version "
-        + Version.VERSION + "<br>" + "(c) " + Copyright.getFromYear() + " - "
-        + Copyright.getToYear() + "<br>" + Copyright.getOwner() + "<br>"
-        + Copyright.getAddress() + "</font>" + "</html>";
+        + "VZ Capacity Management Tool<br>" + "Version "
+        + Version.VERSION + "<br>"+ "Verizon" + "<br>" + 
+        "(c) 2017 - 2017" 
+          + "<br>"
+        + "Walnut Creek, CA" + "</font>" + "</html>";
     JLabel infoLab = new JLabel(infoString);
     infoLab.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
     wekaPan.add(infoLab, BorderLayout.SOUTH);
@@ -1297,7 +1298,7 @@ public class GUIChooserApp extends JFrame {
   }
 
   public void showExplorer(String fileToLoad) {
-    final JFrame frame = new JFrame("Weka Explorer");
+    final JFrame frame = new JFrame("VZ Predictive Capacity Analytics");
     frame.setIconImage(m_Icon);
     frame.getContentPane().setLayout(new BorderLayout());
     Explorer expl = new Explorer();
