@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: Philine
+Built-By: PHILINE
 Build-Jdk: 1.8.0_144
 Main-Class: weka.gui.GUIChooser
 Created-By: Maven Integration for Eclipse
